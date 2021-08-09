@@ -227,7 +227,7 @@ void main()
         }
 
         iIterate =0;
-        while((isalpha(ch)|| isdigit(ch)|| ch=='_' || ch=='.') && (ch!= ' ') && (ch!= '\n') && (ch!= '\t') && (ch!=';')){
+        while((isalpha(ch)|| isdigit(ch)|| ch=='_' || ch=='.') && (ch!= ' ') && (ch!= '\n') && (ch!= '\t') && (ch!=';') && (ch!= '(')){
             
             token[iIterate] = ch;
             printf("%c",ch);
