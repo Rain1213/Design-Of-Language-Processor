@@ -3,7 +3,7 @@
 - [Generic DFA](#generic-dfa)
 - [Lexical Analyzer](#lexical-analyzer)
 
-## **Generic DFA**
+## **GENERIC DFA**
 DFA refers to deterministic finite automata. A DFA is a collection of 5-tuples:
 
 Q: finite set of states  
@@ -24,7 +24,7 @@ F: final state
 Similarly a string as "aabccb" will have to be converted into "112332".
 
 
-### **Example**
+### **EXAMPLE**
 
 <img align="center" alt="Example DFA" width="50%" src="https://raw.githubusercontent.com/Rain1213/Design-Of-Language-Processor/main/images/exampleDFA.jpg" />
 
@@ -61,14 +61,53 @@ Let us take input as "aab" or "112".
 </br>
 </br>
 
-### **Output**
+### **OUTPUT**
 
 <img align="center" alt="output DFA" width="50%" src="https://raw.githubusercontent.com/Rain1213/Design-Of-Language-Processor/main/images/outputDFA.jpg" />
 
 </br>
 </br>
-</br>
+<hr>
 </br>
 
-## **Lexical Analyzer**
+## **LEXICAL ANALYZER**
 
+Lexical analysis is the first phase of a compiler. It takes the modified source code from language preprocessors that are written in the form of sentences. The lexical analyser breaks these syntaxes into a series of tokens, by removing any whitespace or comments in the source code. If the lexical analyser finds a token invalid, it generates an error. The lexical analyzer works closely with the syntax analyser. It reads character streams from the source code, checks for legal tokens, and passes the data to the syntax analyser when it demands.
+
+- The following program takes in the name of a <mark>.c program</mark> in the same directory as the <mark>lexicalAnalyzer.c</mark>
+- The program will convert the c program into tokens and will output them along with their type.
+- There are 6 types of different tokens:</br>
+    i. identifiers</br>
+    ii. reserved keywords</br>
+    iii. constants</br>
+    iv. strings</br>
+    v. operators</br>
+    vi. special symbols</br>
+
+- The program will also ignore all comments.
+- Token errors genereted will also be displaced as "invalid symbols".
+
+## **EXAMPLE**
+
+<mark>Lexical Analyzer/Test.c</mark> contains the following code.
+
+```
+/* compiler
+Practical-4*/
+void main()
+{
+int a; //variable declaration
+float 1b;
+printf ("hi");
+a = a + 20;
+}
+```
+Lets try out lexicalAnalyzer.c on this program.
+
+## **OUTPUT**
+
+<img align="center" alt="output DFA" width="60%" src="https://raw.githubusercontent.com/Rain1213/Design-Of-Language-Processor/main/images/outputLA.jpg" />
+</br>
+</br>
+<hr>
+</br>
