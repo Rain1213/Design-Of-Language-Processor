@@ -1,5 +1,8 @@
 # **Design-Of-Language-Processor**
 
+- [Generic DFA](#generic-dfa)
+- [Lexical Analyzer](#lexical-analyzer)
+
 ## **Generic DFA**
 DFA refers to deterministic finite automata. A DFA is a collection of 5-tuples:
 
@@ -67,5 +70,5 @@ Let us take input as "aab" or "112".
 </br>
 </br>
 
-
+## **Lexical Analyzer**
 
