@@ -16,7 +16,7 @@ F: final state
 
 - In the particular program, the user is can build a generic DFA by inputing the transition table for it.
 
-- Create a <b>test.txt</b> in the same directory where you will extract the <b>genericDFA.c</b> program.
+- Create a `test.txt` in the same directory where you will extract the `genericDFA.c` program.
 
 - Input any String in the .txt file.
 
@@ -74,7 +74,7 @@ Let us take input as "aab" or "112".
 
 Lexical analysis is the first phase of a compiler. It takes the modified source code from language preprocessors that are written in the form of sentences. The lexical analyser breaks these syntaxes into a series of tokens, by removing any whitespace or comments in the source code. If the lexical analyser finds a token invalid, it generates an error. The lexical analyzer works closely with the syntax analyser. It reads character streams from the source code, checks for legal tokens, and passes the data to the syntax analyser when it demands.
 
-- The following program takes in the name of a <b>.c program</b> in the same directory as the <b>lexicalAnalyzer.c</b> or <mark>lexicalAnalyzer.l</mark>
+- The following program takes in the name of a `.c program` in the same directory as the `lexicalAnalyzer.c` or `lexicalAnalyzer.l`
 - The program will convert the c program into tokens and will output them along with their type.
 - There are 6 types of different tokens:</br>
     i. identifiers</br>
