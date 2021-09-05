@@ -74,7 +74,7 @@ Let us take input as "aab" or "112".
 
 Lexical analysis is the first phase of a compiler. It takes the modified source code from language preprocessors that are written in the form of sentences. The lexical analyser breaks these syntaxes into a series of tokens, by removing any whitespace or comments in the source code. If the lexical analyser finds a token invalid, it generates an error. The lexical analyzer works closely with the syntax analyser. It reads character streams from the source code, checks for legal tokens, and passes the data to the syntax analyser when it demands.
 
-- The following program takes in the name of a <mark>.c program</mark> in the same directory as the <mark>lexicalAnalyzer.c</mark>
+- The following program takes in the name of a <mark>.c program</mark> in the same directory as the <mark>lexicalAnalyzer.c</mark> or <mark>lexicalAnalyzer.l</mark>
 - The program will convert the c program into tokens and will output them along with their type.
 - There are 6 types of different tokens:</br>
     i. identifiers</br>
