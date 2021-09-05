@@ -87,7 +87,7 @@ Lexical analysis is the first phase of a compiler. It takes the modified source 
 - The program will also ignore all comments.
 - Token errors genereted will also be displaced as "invalid symbols".
 
-## **EXAMPLE**
+### **EXAMPLE**
 
 <mark>Lexical Analyzer/Test.c</mark> contains the following code.
 
@@ -102,11 +102,17 @@ printf ("hi");
 a = a + 20;
 }
 ```
-Lets try out lexicalAnalyzer.c on this program.
+</br>
 
-## **OUTPUT**
+### **OUTPUT: `lexicalAnalyzer.c`**
 
-<img align="center" alt="output DFA" width="60%" src="https://raw.githubusercontent.com/Rain1213/Design-Of-Language-Processor/main/images/outputLA.jpg" />
+<img align="center" alt="output DFA for c program" width="60%" src="https://raw.githubusercontent.com/Rain1213/Design-Of-Language-Processor/main/images/outputLA.jpg" />
+</br>
+
+### **OUTPUT: `lexicalAnalyzer.l`**
+
+<img align="center" alt="output DFA for lex program" width="60%" src="https://raw.githubusercontent.com/Rain1213/Design-Of-Language-Processor/main/images/outputLA2.JPG" />
+
 </br>
 </br>
 <hr>
