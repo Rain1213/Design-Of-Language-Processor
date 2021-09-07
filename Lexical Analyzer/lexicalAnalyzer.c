@@ -224,7 +224,7 @@ void main()
 
         iIterate =0;
         
-        while((ch!= ' ') && (ch!= '\n') && (ch!= '\t') && (ch!=';') && (ch!='(') && (ch!='\"') && ch!=','){
+        while((ch!= ' ') && (ch!= '\n') && (ch!= '\t') && (ch!=';') && (ch!='(') && (ch!='\"') && ch!=',' && ch!=')'&& ch!='}' && ch!='{'){
             
             token[iIterate] = ch;
             printf("%c",ch);
