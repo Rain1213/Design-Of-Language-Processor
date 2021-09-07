@@ -59,7 +59,7 @@ int isConstantOrIdentifier(char token[])
     int iIterate=0;
     int decimalCount = 0;
     int digitCount = 0;
-
+    
     while(token[iIterate]!= '\0'){
         length++;
         iIterate++;
@@ -96,25 +96,21 @@ int isConstantOrIdentifier(char token[])
     }
     else if (isalpha(token[0]) || token[0] == '_')
     {
+        iIterate++;
 
-        while(token[iIterate]!= '\0')
-        {
+        while(token[iIterate]!= '\0'){
 
-            if (token[iIterate] == '.')
-            {
-                decimalCount++;
+            // if the identier contains other than alphabet, number or '_' it is invalid
+            if(!isalpha(token[iIterate]) && !isdigit(token[iIterate]) && token[iIterate]!='_'){
+
+                return 0; //Invalid Identifier
             }
             iIterate++;
         }
 
-        if (length == length - (decimalCount))
-        {
-            return 2; //Valid Identifier
-        }
-        else
-        {
-            return 0; //Invalid Identifier
-        }
+        //if while loop runs with returning any value, the identifier is valid
+        return 2; //Valid Identifier
+
     }
 
     return 0;
@@ -213,7 +209,7 @@ void main()
             Special Symbols
             ';' '[' ',' ')'  etc
         */
-        if (ch == ';' || ch == ',' || ch == '(' || ch == ')' || ch == '[' || ch == ']' || ch == '{' || ch == '}')
+        if (ch == ';' || ch == ',' || ch == '(' || ch == ')' || ch == '[' || ch == ']' || ch == '{' || ch == '}' || ch=='!'|| ch=='#' || ch=='&')
         {
             printf("%c is a Special Symbol\n", ch);
         }
@@ -227,7 +223,8 @@ void main()
         }
 
         iIterate =0;
-        while((isalpha(ch)|| isdigit(ch)|| ch=='_' || ch=='.') && (ch!= ' ') && (ch!= '\n') && (ch!= '\t') && (ch!=';') && (ch!= '(')){
+        
+        while((ch!= ' ') && (ch!= '\n') && (ch!= '\t') && (ch!=';') && (ch!='(') && (ch!='\"') && ch!=','){
             
             token[iIterate] = ch;
             printf("%c",ch);
