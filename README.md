@@ -2,6 +2,7 @@
 
 - [Generic DFA](#generic-dfa)
 - [Lexical Analyzer](#lexical-analyzer)
+- [Recursive Descent Parser](#recursive-descent-parser)
 
 ## **GENERIC DFA**
 DFA refers to deterministic finite automata. A DFA is a collection of 5-tuples:
@@ -112,6 +113,33 @@ a = a + 20;
 ### **OUTPUT: `lexicalAnalyzer.l`**
 
 <img align="center" alt="output DFA for lex program" width="60%" src="https://raw.githubusercontent.com/Rain1213/Design-Of-Language-Processor/main/images/outputLA2.JPG" />
+
+</br>
+</br>
+<hr>
+</br>
+
+## **Recursive Descent Parser**
+
+There are two types of Parsers:
+- **Top Down Parser** :
+    Parser where a start symbol is expanded into a whole program. Recursive Descent and LL Parser are Top-Down in nature.
+
+- **Bottom Up Parser** :
+    Parser where the whole program is reduces to a start symbol. LR(0) is a Bottom Up Parser
+
+RDP uses a set of recursive procedures to scan the input. Recursive Parsing method includes backtracking. Backtracking repeatedly scans its inputs.
+Grammer must first eliminate left recursion. The result can be passed to RDP Parser. 
+
+<img align="center" alt="RDP Flow" width="50%" src="https://raw.githubusercontent.com/Rain1213/Design-Of-Language-Processor/main/images/RDP.PNG" />
+
+In this code, for every variable, we would be writing a function. The prime player in this code will be a global variable known as lookahead operator, which will be tasked with scanning the next character from the input.
+
+<mark>Recursive Descent Parser/RecursiveDescentParser.c</mark> takes in the name of a txt file as an input. You would write the grammer in this input file.
+
+<img align="center" alt="RDP Input Text File" width="40%" src="https://raw.githubusercontent.com/Rain1213/Design-Of-Language-Processor/main/images/inputGrammerRDP.PNG" />
+
+<img align="center" alt="RDP Program Output" width="70%" src="https://raw.githubusercontent.com/Rain1213/Design-Of-Language-Processor/main/images/outputGrammerRDP.PNG" />
 
 </br>
 </br>
